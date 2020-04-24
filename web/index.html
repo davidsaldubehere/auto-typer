@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Typer</title>
+</head>
+<body>
+    <p id="position">Position</p>
+    <button onclick="eel.startListener()()">Get Position</button>
+    <script>
+        eel.expose(updateClick);
+        function updateClick(x, y){
+            document.getElementById("position").innerHTML = (x + ',' + y)
+        }
+
+    </script>
+</body>
+</html>
