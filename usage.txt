@@ -1,0 +1,5 @@
+add     
+"editor.autoIndent": "none"
+to  your editor settings and
+"editor.quickSuggestions": false
+to your local vscode settings

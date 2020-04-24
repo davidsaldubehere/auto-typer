@@ -2,20 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="/eel.js"></script>
-    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Typer</title>
+    <script src="/eel.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <p id="position">Position</p>
-    <button onclick="eel.startListener()()">Get Position</button>
+    <textarea spellcheck="false" id = 'mainInput' type="text" onchange="console.log(this.value)"></textarea>
+    <div class="menu">
+        <button onclick='starter()'>Start</button>
+        <p>Time Delay</p>
+        <input  id = "name"type="text" value="3">
+        <div class="divider"></div>
+        <p id = "position">Position</p>
+        <button onclick="eel.startListener()()">Select Position</button>
+        <p>Created by David Saldubehere</p>
+
+    </div>
+
     <script>
+        const delay = document.getElementById('name').value
+        var input = document.getElementById('mainInput');
+
         eel.expose(updateClick);
         function updateClick(x, y){
             document.getElementById("position").innerHTML = (x + ',' + y)
         }
-
+        function starter(){
+            let removedTabs = input.value;
+            eel.start(removedTabs, delay)();
+        }
+        document.getElementById('mainInput').onkeyup = function(e){
+            input.value = input.value.replace(/    /g, '\t')
+        }
     </script>
 </body>
 </html>
