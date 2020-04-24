@@ -21,16 +21,20 @@
     </div>
 
     <script>
+        var xCor;
+        var yCor;
         const delay = document.getElementById('name').value
         var input = document.getElementById('mainInput');
 
         eel.expose(updateClick);
         function updateClick(x, y){
+            xCor = x;
+            yCor = y;
             document.getElementById("position").innerHTML = (x + ',' + y)
         }
         function starter(){
             let removedTabs = input.value;
-            eel.start(removedTabs, delay)();
+            eel.start(removedTabs, delay, xCor, yCor)();
         }
         document.getElementById('mainInput').onkeyup = function(e){
             input.value = input.value.replace(/    /g, '\t')

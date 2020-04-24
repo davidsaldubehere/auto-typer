@@ -2,9 +2,7 @@ import eel
 import pyautogui as py
 from pynput import mouse
 import time
-
 def getClickPos(x, y, button, pressed):
-    print(x,y)
     eel.updateClick(x, y)
     return False
 
@@ -14,8 +12,12 @@ def startListener():
             listener.join()
 
 @eel.expose
-def start(data, delay):
+def start(data, delay, x, y):
     time.sleep(int(delay))
+    try:
+        py.click(x, y)
+    except Exception:
+        print('No Position Entered')
     breakData = data.split("$")
     print(breakData)
     for i in range(len(breakData)):
@@ -27,7 +29,7 @@ def start(data, delay):
                 pass
         
         elif len(breakData[i])!=1:
-            py.typewrite(breakData[i], .1)
+            py.typewrite(breakData[i], .07)
 
 eel.init('web')
 eel.start('index.html')
