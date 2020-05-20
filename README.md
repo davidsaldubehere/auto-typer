@@ -1,3 +1,6 @@
+Useful GUI for autotyping code into an editor like vscode
+
+
 add "editor.autoIndent": "none" to  your editor settings and
 "editor.quickSuggestions": false to your local vscode settings
 
