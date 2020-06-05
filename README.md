@@ -20,3 +20,4 @@ Requires pyautogui and eel if you want to run the main.py script
 (just do a quick pip install pyautogui and pip install eel)
 
 OR you could just download the exe from the releases section.
+https://github.com/davidsaldubehere/auto-typer/releases
