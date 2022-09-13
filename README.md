@@ -12,8 +12,8 @@ This will make sure no autocomplete features mess with the code (only needed if 
 Paste your text into the input section,
 Click the select position button to add the starting click position,
 To add pausing, add these arguments anywhere inside your text:
-$pause$ - waits until the user clicks anywhere before proceeding
-$secondamount$ - waits a specified amount of seconds before proceeding
+'$pause$' - waits until the user clicks anywhere before proceeding
+'$secondamount$' - waits a specified amount of seconds before proceeding
 
 Click the start button to begin typing.
 
