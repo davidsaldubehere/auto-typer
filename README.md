@@ -1,12 +1,13 @@
-Useful GUI for autotyping code into an editor like vscode
+# Auto Typer
+Useful GUI for autotyping code into an editor like vscode (Coding tutorials, demonstrations, etc.)
 
 
 add "editor.autoIndent": "none" to  your editor settings and
 "editor.quickSuggestions": false to your local vscode settings
 
-This will make sure no autocomplete features mess with the code (only needed if you are working with a code editor like vscode)
+This will make sure no autocomplete features mess with the code (only needed if you are working with an advanced code editor like vscode)
 
-Instructions for use:
+# Instructions for use
 
 Paste your text into the input section,
 Click the select position button to add the starting click position,
