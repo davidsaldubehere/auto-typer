@@ -18,8 +18,6 @@ body{
     border-radius: 6px;
     height: 96vh;
     width: 80%;
-    color: #838990;
-    background: none;
     font-size: 21px;
 }
 #mainInput:focus{
@@ -58,7 +56,8 @@ button:focus{
 p{
     text-align: center;
     color: #84898f;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #name{
     padding: 5px;

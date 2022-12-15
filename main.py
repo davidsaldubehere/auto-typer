@@ -35,7 +35,7 @@ def start(data, delay, x, y):
         elif breakData[i]=='pause':
             startPauseListener()
         elif len(breakData[i])!=1:
-            py.typewrite(breakData[i], .07)
+            py.typewrite(breakData[i], .01)
 
 eel.init('web')
 eel.start('index.html')
