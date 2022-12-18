@@ -13,7 +13,7 @@ body{
 }
 #mainInput{
     position: relative;
-    margin: 5px;
+    margin: 10px;
     border: 2px solid #3d434e;
     border-radius: 6px;
     height: 96vh;
@@ -59,7 +59,7 @@ p{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#name{
+input{
     padding: 5px;
     border: 2px solid #3d434e;
     border-radius: 6px;

@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Typer</title>
     <script src="/eel.js"></script>
-    <script src="code-input.min.js"></script>
-    <link href="prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="atom-one-dark.min.css">
+    <script src="highlight.min.js"></script>
     <link rel="stylesheet" href="code-input.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="code-input.min.js"></script>
     <script src = "indent.js"></script>
 
 </head>
 <body> 
-    <!--<textarea spellcheck="false" id = 'mainInput' type="text" onchange="console.log(this.value)"></textarea>--->
-    <code-input lang="python" template="syntax-highlighted" id='mainInput'></code-input>
+    <code-input lang="Java" placeholder = "..." template="syntax-highlighted" id='mainInput'></code-input>
     
     <div class="menu">
         <button onclick='starter()'>Start</button>
         <p>Time Delay (s)</p>
         <input  id = "name"type="text" value="3">
         <p>Speed (%)</p>
-        <input  id = "name"type="text" value="100">
+        <input  id = "speed"type="text" value="100">
+        <p>Language</p>
+        <input  id = "language"type="text" value="Java">
         <div class="divider"></div>
         <p id = "position">Starting Click Position</p>
         <button onclick="eel.startListener()()">Select Position</button>
@@ -30,12 +33,20 @@
     </div>
     <script src="prism.js"></script>
     <script>
-    codeInput.registerTemplate("syntax-highlighted", codeInput.templates.prism(Prism, [new codeInput.plugins.Indent()]));
-
+        codeInput.registerTemplate("syntax-highlighted", 
+          codeInput.templates.prism(
+            Prism, 
+            [
+              new codeInput.plugins.Indent()
+            ]
+          )
+        );
         var xCor;
         var yCor;
-        const delay = document.getElementById('name').value
-
+        const input = document.getElementById('mainInput')
+        const delay = document.getElementById('name')
+        const speed = document.getElementById('speed')
+        const language = document.getElementById('language')
         eel.expose(updateClick);
         function updateClick(x, y){
             xCor = x;
@@ -44,11 +55,13 @@
         }
         function starter(){
             
-            eel.start(document.getElementById('mainInput').value, delay, xCor, yCor)();
+            eel.start(input.value, delay.value, xCor, yCor, speed.value*.01)();
         }
-        //document.getElementById('mainInput').onkeyup = function(e){
-        //    input.value = input.value.replace(/    /g, '\t')
-        //}
+
+        language.addEventListener('input', function(){
+            input.setAttribute('lang', language.value)
+        })
+
     </script>
 </body>
 </html>
