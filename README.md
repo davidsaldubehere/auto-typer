@@ -22,4 +22,6 @@ Requires pyautogui and eel if you want to run the main.py script
 
 OR you could just download the exe from the releases section.
 https://github.com/davidsaldubehere/auto-typer/releases
-![Capture](https://user-images.githubusercontent.com/46616464/189927043-85c303a2-58b3-4889-85ed-b5f3e527f8ed.PNG)
+
+## Video Demo
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/68wRCEQ_VPk/0.jpg)](https://www.youtube.com/watch?v=68wRCEQ_VPk)
